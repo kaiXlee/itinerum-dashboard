@@ -1,0 +1,53 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    background-color: $itinerumWhite;
+    height: 60px;
+
+    .header-row {
+        margin-right: 0;
+    }
+
+    .navigator-controls {
+        align-items: center;
+        display: flex;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+
+        .datetime-nav-select {
+            border-radius: 4px;
+            padding: 0 10px;
+
+            .nav-link {
+                line-height: 24px;
+            }
+
+            &.active {
+                background-color: rgba(0, 0, 0, 0.05);
+            }
+        }
+    }
+
+    .control-buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 10px;
+
+        .control-button-group {
+            margin-right: 70px;
+            position: relative;
+
+            .button-text {
+                color: $itinerumGray20;
+                font-size: 14px;
+                font-weight: 600;
+                position: absolute;
+                left: 50px;
+                top: 9px;
+            }
+        }
+    }
+}

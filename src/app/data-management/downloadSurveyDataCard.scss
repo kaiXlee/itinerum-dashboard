@@ -1,0 +1,21 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .calendar-group {
+        display: flex;
+        justify-content: center;
+        input {
+            text-align: center;
+        }
+    }
+
+    .export-button-group {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            margin: 0 1em;
+        }
+    }
+}

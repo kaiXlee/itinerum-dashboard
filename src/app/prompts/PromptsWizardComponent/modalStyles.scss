@@ -1,0 +1,18 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    // survey reset modal
+    .modal-title {
+        color: $itinerumRed;
+    }
+
+    .modal-body {
+        font-family: $nunitoSans;
+        
+        .param-input {
+            font-family: $sourceSansPro;
+            margin-bottom: 0.5em;
+        }        
+    }
+}

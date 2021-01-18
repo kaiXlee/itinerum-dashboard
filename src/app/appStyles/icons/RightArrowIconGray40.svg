@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="27px" height="14px" viewBox="0 0 27 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Right Arrow Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-683.000000, -7740.000000)">
+        <g id="Pagination" transform="translate(150.000000, 7510.000000)" fill="#666666">
+            <g id="Shadow-Filled-Round" transform="translate(107.000000, 213.000000)">
+                <g id="Next" transform="translate(390.000000, 1.000000)">
+                    <path d="M59.0666083,21.7625631 L55.0412416,17.7371964 C54.6507174,17.3466721 54.6507174,16.7135072 55.0412416,16.3229829 L55.1014209,16.2628036 C55.4919452,15.8722793 56.1251102,15.8722793 56.5156345,16.2628036 L62.1724888,21.9196578 C62.4193229,22.166492 62.5101435,22.5102606 62.4449504,22.8284271 C62.5101435,23.1465937 62.4193229,23.4903623 62.1724888,23.7371964 L56.5156345,29.3940507 C56.1251102,29.784575 55.4919452,29.784575 55.1014209,29.3940507 L55.0412416,29.3338714 C54.6507174,28.9433471 54.6507174,28.3101821 55.0412416,27.9196578 L59.1983363,23.7625631 L37,23.7625631 C36.4477153,23.7625631 36,23.3148479 36,22.7625631 C36,22.2102784 36.4477153,21.7625631 37,21.7625631 L59.0666083,21.7625631 Z" id="Right-Arrow-Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

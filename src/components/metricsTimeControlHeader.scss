@@ -1,0 +1,25 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    background-color: $itinerumWhite;
+
+    .control {
+        padding: 0.7rem 1.2rem 0;
+
+        .period-num-container {
+            display: inline;
+            padding-right: 1.2rem;
+            
+            .period-num-input {
+                font-size: 12px;
+                height: 30px;
+                margin-bottom: 0;
+                margin-left: 0.6rem;
+                max-width: 8rem;
+                padding: 0;
+                text-align: center;
+            }
+        }
+    }
+}

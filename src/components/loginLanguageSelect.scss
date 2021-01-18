@@ -1,0 +1,64 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+
+:local(.styles) {
+	display: inherit;
+
+	.flex {
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
+		display: flex;
+		flex-direction: column;
+		-webkit-align-items: center;
+		-webkit-box-align: center;
+		-webkit-box-direction: normal;
+		-webkit-box-orient: vertical;
+		-webkit-box-pack: center;
+		-webkit-flex-direction: column;
+		-webkit-justify-content: center;
+		-ms-flex-align: center;
+		-ms-flex-direction: column;
+		-ms-flex-pack: center;		
+	}
+
+	.language-select {
+		width: 30px;
+		max-width: 100%;
+		height: 30px;
+
+		justify-content: center;
+		align-items: center;
+		border: 2px solid $itinerumWhite;
+		border-radius: 100px;
+		text-decoration: none;
+		background-color: $itinerumPrimaryBlue;
+		color: $itinerumWhite;
+		cursor: pointer;
+
+		&.active {
+			background-color: $itinerumWhite;
+			color: $itinerumPrimaryBlue;
+		}
+
+		&:hover {
+			background-color: $itinerumWhite;
+			color: $itinerumPrimaryBlue;
+		}
+
+		&:nth-child(n+2) {
+			margin-left: 5px;
+		}
+	}
+
+	.language-select-text {
+		font-family: Arial;
+		font-size: 14px;
+		margin-top: -2px;
+
+		&.fr {
+			margin-top: -1px;
+		}
+	}
+}

@@ -1,0 +1,83 @@
+/* global styles */
+
+@import 'fonts/sourcesanspro';
+@import 'fonts/materialicons';
+@import 'fonts/spacemono';
+@import 'fonts/nunitosans';
+@import 'typography';
+@import 'colors_v2';
+@import 'mixins';
+@import 'screens';
+
+:global(body) {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    background-color: $itinerumBlueGray;
+    font-family: $nunitoSans;
+}
+
+:global .wrapper {
+    padding-left: 16em;
+    @media (#{$phone}) {
+        padding-left: 80px;
+    }
+
+    margin: auto;
+
+    .header {
+        height: 4em;
+        background: white;
+    }
+
+    .content-wrapper {
+        width: 100%;
+        padding: 0 5%;
+        margin: auto;
+        margin-top: 2em;
+    }
+}
+
+:global .btn {
+    font: bold $nunitoSans;
+    text-transform: uppercase;
+    border-radius: 2px;
+    border: 0;
+    box-shadow: inherit !important;
+    border-color: inherit;
+}
+
+:global .table-card {
+  padding: 2em;
+  background-color: white;
+  box-shadow: $shadow;
+}
+
+.react-redux-modal {
+    .subway-help .modal-body {
+        font-family: $sourceSansPro;
+    }
+
+    // survey reset modal
+    .rrm-holder .scroll .rrm-title .reset-warning-title {
+        color: red;
+        font-size: 1.4em;
+        line-height: 60px;
+
+        i {
+            margin-left: -5px;
+            padding-right: 5px;
+            vertical-align: -2px;
+        }
+    }
+
+    .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions .rr-close {
+        border-radius: 2px;
+
+        &:hover {
+            color: $itinerumPrimaryBlue;
+            cursor: pointer;
+            background-color: rgba(65, 134, 191, 0.1);
+            border-color: rgba(65, 134, 191, 0.2);
+        }
+    }
+}

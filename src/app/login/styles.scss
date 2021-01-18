@@ -1,0 +1,461 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    @-webkit-keyframes logo-dot-animation {
+        0%   { 
+            opacity: 0;
+            transform: scaleX(.2) scaleY(.2) scaleZ(.2);
+        }
+
+        90% { transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2); }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px) translateY(0px) translateZ(0px) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg);
+            visibility: visible;
+        }
+    }
+    @-moz-keyframes logo-dot-animation {
+        0%   { 
+            opacity: 0;
+            transform: scaleX(.2) scaleY(.2) scaleZ(.2);
+        }
+
+        90% { transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2); }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px) translateY(0px) translateZ(0px) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg);
+            visibility: visible;
+        }
+    }
+    @-o-keyframes logo-dot-animation {
+        0%   { 
+            opacity: 0;
+            transform: scaleX(.2) scaleY(.2) scaleZ(.2);
+        }
+
+        90% { transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2); }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px) translateY(0px) translateZ(0px) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg);
+            visibility: visible;
+        }
+    }
+    @keyframes logo-dot-animation {
+        0%   { 
+            opacity: 0;
+            transform: scaleX(.2) scaleY(.2) scaleZ(.2);
+        }
+
+        90% { transform: scaleX(1.2) scaleY(1.2) scaleZ(1.2); }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0px) translateY(0px) translateZ(0px) scaleX(1) scaleY(1) scaleZ(1) skewX(0deg) skewY(0deg);
+            visibility: visible;
+        }
+    }
+
+    @-webkit-keyframes logo-path-animation-1 {
+        0%   { height: 0; }
+        100% { height: 198px; }
+    }
+
+    @-moz-keyframes logo-path-animation-1 {
+        0%   { height: 0; }
+        100% { height: 48px; }
+    }
+
+    @-o-keyframes logo-path-animation-1 {
+        0%   { height: 0; }
+        100% { height: 48px; }
+    }
+
+    @keyframes logo-path-animation-1 {
+        0%   { height: 0; }
+        100% { height: 48px; }
+    }
+
+    @-webkit-keyframes logo-path-animation-2 {
+        0%   { width: 0; }
+        100% { width: 198px; }
+    }
+
+    @-moz-keyframes logo-path-animation-2 {
+        0%   { width: 0; }
+        100% { width: 198px; }
+    }
+
+    @-o-keyframes logo-path-animation-2 {
+        0%   { width: 0; }
+        100% { width: 198px; }
+    }
+
+    @keyframes logo-path-animation-2 {
+        0%   { width: 0; }
+        100% { width: 198px; }
+    }
+
+    @-webkit-keyframes logo-image-animation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @-moz-keyframes logo-image-animation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @-o-keyframes logo-image-animation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    @keyframes logo-image-animation {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    // general login styles
+    .flex {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        flex-direction: column;
+        -webkit-align-items: center;
+        -webkit-box-align: center;
+        -webkit-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -webkit-box-pack: center;
+        -webkit-flex-direction: column;
+        -webkit-justify-content: center;
+        -ms-flex-align: center;
+        -ms-flex-direction: column;
+        -ms-flex-pack: center;
+    }
+
+    .flex-container {
+        height: 100vh;
+        background-color: #007af2;
+
+        .language-select-block {
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            margin-top: 15px;
+            margin-right: 15px;
+            align-items: center;
+        }
+    }
+
+    .logo-block {
+        width: 250px;
+        height: 73px;
+        position: relative;
+
+        .dot {
+            background-color: $itinerumWhite;
+            border-radius: 100%;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+            height: 15px;
+            position: absolute;
+            width: 15px;
+            z-index: 2;
+
+            &.animate {
+                opacity: 0;
+                visibility: hidden;
+                -webkit-animation:   logo-dot-animation 0.25s ease; /* Safari 4+ */
+                -moz-animation:      logo-dot-animation 0.25s ease; /* Fx 5+ */
+                -o-animation:        logo-dot-animation 0.25s ease; /* Opera 12+ */
+                animation:           logo-dot-animation 0.25s ease; /* IE 10+, Fx 29+ */
+                animation-fill-mode: forwards;
+            }
+
+
+            &._1 {
+                left: 45px;
+                top: 0px;
+            }
+
+            &._2 {
+                left: 45px;
+                top: 50px;
+                &.animate {
+                    animation-delay: 250ms;
+                }
+            }
+
+            &._3 {
+                left: 93.75px;
+                top: 50px;
+
+                &.animate {
+                    animation-delay: 500ms;
+                }
+            }
+
+            &._4 {
+                left: 142.5px;
+                top: 50px;
+
+                &.animate {
+                    animation-delay: 750ms;
+                }
+            }
+
+            &._5 {
+                left: 191.25px;
+                top: 50px;
+
+                &.animate {
+                    animation-delay: 1s;
+                }
+            }
+
+            &._6 {
+                left: 240px;
+                top: 50px;
+                &.animate {
+                    animation-delay: 1.25s;
+                }
+            }
+        }
+
+        .path {
+            background-color: $itinerumWhite;
+            position: absolute;
+            z-index: 1;
+
+            &._1 {
+                height: 48px;
+                left: 50px;                
+                top: 12px;
+                width: 5px;
+
+                &.animate {
+                    height: 0;
+                    -webkit-animation:   logo-path-animation-1 0.39s linear; /* Safari 4+ */
+                    -moz-animation:      logo-path-animation-1 0.39s linear; /* Fx 5+ */
+                    -o-animation:        logo-path-animation-1 0.39s linear; /* Opera 12+ */
+                    animation:           logo-path-animation-1 0.39s linear; /* IE 10+, Fx 29+ */
+                    animation-fill-mode: forwards;
+                    animation-delay:     0.1s;
+                }
+            }
+
+            &._2 {
+                height: 5px;
+                left: 50px;
+                top: 55px;
+                width: 198px;
+
+                &.animate {
+                    width: 0px;
+                    -webkit-animation:   logo-path-animation-2 1.2s linear; /* Safari 4+ */
+                    -moz-animation:      logo-path-animation-2 1.2s linear; /* Fx 5+ */
+                    -o-animation:        logo-path-animation-2 1.2s linear; /* Opera 12+ */
+                    animation:           logo-path-animation-2 1.2s linear; /* IE 10+, Fx 29+ */
+                    animation-fill-mode: forwards;
+                    animation-delay:     0.4s;
+                }
+            }
+        }
+
+        .itinerum-logo {
+            left: 5px;
+            opacity: 1;
+            position: absolute;
+            top: -4px;
+            width: 250px;
+
+            &.animate {
+                opacity: 0;
+                -webkit-animation:   logo-image-animation 0.8s linear; /* Safari 4+ */
+                -moz-animation:      logo-image-animation 0.8s linear; /* Fx 5+ */
+                -o-animation:        logo-image-animation 0.8s linear; /* Opera 12+ */
+                animation:           logo-image-animation 0.8s linear; /* IE 10+, Fx 29+ */
+                animation-fill-mode: forwards;
+                animation-delay:     0.2s;
+            }
+        }
+    }
+
+    // child styles
+    .login-block {
+        width: 70%;
+        height: 70%;        
+        
+        border-radius: 5px;
+        box-shadow: none;       
+
+        .login-form-block {
+            width: 60%;
+            max-width: 350px;
+            min-height: 100px;
+            margin-bottom: 0px;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+
+            .login-inputs-block {
+                height: 50%;
+            }
+        }        
+    }
+
+    .forgot-password-block {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+
+    .status {
+        height: 14px;
+        position: relative;
+
+        .status-text {
+            color: $itinerumGray90;
+            font-family: $nunitoSans;
+            font-size: 14px;
+
+            i.material-icons {
+                font-size: 16px;
+                padding-right: 3px;
+                vertical-align: -3px;
+            }
+        }
+
+        &.signin-status {
+            .status-text {
+                left: 24px;
+                line-height: 15px;
+                position: absolute;
+            }
+
+            i {
+                color: $itinerumGray90;
+                font-size: 18px;
+                line-height: 15px;
+                position: absolute;
+            }
+        }
+    }
+
+    .reset-password-block {
+        align-items: center;
+        display: flex;
+        margin-top: 30px;
+        justify-content: center;
+
+        section {
+            margin-right: 20px;
+            width: 50%;
+        }
+
+        input {
+            border-color: transparent transparent $itinerumGray90;
+            color: $itinerumWhite;
+            margin-top: 0;
+        }
+
+        .reset-status {
+            color: $itinerumWhite;
+
+            .text {
+                color: $itinerumGray90;
+            }
+        }
+    }
+
+    // components
+    .button-wrapper {
+        display: flex;
+        justify-content: center;
+
+        a:hover {
+            text-decoration: none;
+        }
+    }
+
+    .primary-button {
+        background-color: $itinerumPrimaryBlue;
+        border: none;
+        border-radius: 100px;
+        box-shadow: none;
+        color: $itinerumWhite;
+        cursor: pointer;
+        font-family: $nunitoSans;
+        font-size: 15px;
+        font-weight: 800;
+        height: 50px;
+        letter-spacing: 0.5px;
+        margin-top: 15px;
+        position: relative;
+        text-decoration: none;
+        width: 200px;
+
+        transition: all 500ms ease;
+        -webkit-transition: all 500ms ease;
+
+
+        i {
+            animation: rotate 2s infinite linear;
+            border: 3px solid $itinerumWhite;
+            border-top: 3px solid $itinerumPrimaryBlue;
+            height: 18px;
+            width: 18px;
+            left: 30px;
+            position: absolute;
+        }
+
+        &:hover {
+            box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .11);
+        }
+
+        &:focus {
+            outline: none;
+        };
+
+        &.white {
+            background-color: $itinerumWhite;
+            box-shadow: none;
+            color: $itinerumPrimaryBlue;
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-top: 30px;
+                        
+            &:hover {
+                box-shadow: 0 30px 60px 0 rgba(0, 0, 0, .11);               
+            }
+        }
+    }
+
+    .text-link {
+        font-family: $nunitoSans;
+        color: $itinerumWhite;
+        font-size: 13px;
+        letter-spacing: 0.5px;
+
+        &.forgot {
+            display: block;
+            margin-right: auto;
+            margin-left: auto;
+            float: right;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }       
+    }    
+}

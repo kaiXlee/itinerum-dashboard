@@ -1,0 +1,9 @@
+.DS_Store
+node_modules/
+/static
+!static/avatars/avatar.jpg
+assets/*
+npm-debug.log
+.idea/
+package-lock.json
+static-deleteme

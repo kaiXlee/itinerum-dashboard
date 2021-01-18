@@ -1,0 +1,18 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .export-table {
+        tbody {
+            tr:hover {
+                cursor: default;
+                background-color: $itinerumWhite;
+                color: inherit;
+
+                input {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

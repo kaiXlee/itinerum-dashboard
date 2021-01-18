@@ -1,0 +1,16 @@
+@import 'src/app/appStyles/colors_v2';
+
+.loading-spinner {
+    animation: rotate 2s infinite linear;
+    border: 1px solid $itinerumWhite;
+    border-top: 1px solid $itinerumPrimaryBlue;
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-right: 4px;
+}
+
+@keyframes rotate {
+    0%    { transform: rotate(0deg); }
+    100%  { transform: rotate(360deg); }
+}

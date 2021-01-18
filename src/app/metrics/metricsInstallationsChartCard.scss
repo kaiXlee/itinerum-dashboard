@@ -1,0 +1,15 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .overlay {
+        position: relative;
+    }
+
+    .overlay-text {
+        color: $itinerumGray90;
+        position: absolute;
+        top: 20%;
+        left: 28%;
+    }  
+}

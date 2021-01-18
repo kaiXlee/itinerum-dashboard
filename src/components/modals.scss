@@ -1,0 +1,64 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.modalStyles) {
+    .modal-body {
+        font-family: $nunitoSans;
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        table {
+            thead {
+                th {
+                    padding: 5px;
+                    font-size: 16px;
+                }
+            }
+
+            tbody {
+                tr:hover {
+                    background-color: inherit;
+                    color: inherit;
+                }
+
+                th {
+                    font-size: 12px;
+                }
+
+                td {
+                    padding: 2px;
+                    border: 1px solid $itinerumGray90;
+                }
+            }
+        }
+
+        .help-text > p {
+            margin-top: -10px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+
+    .modal-footer {
+        display: flex;
+        justify-content: center;
+
+        .button {
+            margin: 0 0.3rem;
+        }
+    }
+
+    .delete-text {
+        font-family: $sourceSansPro;
+        color: $itinerumRed;
+    }
+
+    .btn-default {
+        border: 1px solid #D4D4D4;
+        color: $itinerumGray60;
+    }
+
+}

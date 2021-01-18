@@ -1,0 +1,31 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+	.nav-arrow {
+		color: $itinerumGray60;
+		cursor: default;
+		font-size: 40px;
+		line-height: 50px;
+
+		&.active {
+			color: $itinerumPrimaryBlue;
+			cursor: pointer;
+
+			&:hover {
+				filter: brightness(120%);
+			}
+		}
+
+		&.mirror {
+			transform: scaleX(-1);
+		    -moz-transform: scaleX(-1);
+		    -webkit-transform: scaleX(-1);
+		    -ms-transform: scaleX(-1);
+		}
+	}
+
+	.datepicker-icons > .i-input {
+		text-align: center;
+	}
+}

@@ -1,0 +1,31 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    margin: 1em;
+
+    .profile-img {
+        height: 8em;
+        width: 8em;        
+        margin: auto;
+        & > img {
+            height: 8em;
+            width: 8em;
+            background-color: $itinerumSecondaryBlue;
+            border-radius: 50%;
+            border: 0.6em solid $itinerumSecondaryBlue;
+        }
+    }
+
+    .img-upload {
+        vertical-align: middle;
+    }
+
+    .image-size-text {
+        padding-top: 1em;
+    }
+    
+    .error-text {
+        color: red;
+    }    
+}

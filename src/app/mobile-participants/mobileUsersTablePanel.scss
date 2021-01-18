@@ -1,0 +1,18 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    width: 96%;
+    padding-top: 0.4rem;
+    margin: auto;
+
+    .table-container {
+      overflow-x: scroll;
+
+        table {
+            td {
+                white-space: nowrap;
+            }
+        }
+    }
+}

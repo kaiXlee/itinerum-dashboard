@@ -1,0 +1,342 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/screens';
+@import 'src/app/appStyles/mixins';
+
+:local(.styles) {
+    bottom: 0;
+
+    position: fixed !important;
+    @media screen and (min-height: 901px) {
+        position: fixed !important;
+    }
+
+    background: $sidebarBg;
+    border-right: 0.1em solid #{$sidebarBg};
+    left: 0;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 16em;
+    z-index: 999;
+
+    @media (#{$phone}) {
+        width: 80px;
+    }
+
+    .current-user {
+        position: relative;
+        padding: 0 25px;
+        margin-bottom: 20px;
+        height: 80px;
+        border-bottom: 1px solid #3c454c;
+
+        .name {
+            color: #fff;
+            font-size: 1em;
+            text-decoration: none;
+            padding: 20px 0;
+            display: block;
+            position: relative;
+
+            .avatar {
+                max-width: 2.8em;
+                border-radius: 50%;
+                position: relative;
+                top: 1px;
+                margin-right: 10px;
+
+                @media (#{$phone}) {
+                    top: 10px;
+                    margin-left: -0.5em;
+                }
+            }
+
+            span {
+                position: relative;
+                top: 3px;
+
+                @media (#{$phone}) {
+                    display: none;
+                }
+
+                .mdi-chevron-down {
+                    margin-left: 5px;
+                    position: relative;
+                    color: #9BABBB;
+                    top: 3px;
+                }
+            }
+        }
+    }
+
+    .menu-section {
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 1.4em;
+
+            li {
+                @media (#{$phone}) {
+                    position: relative;
+                }
+
+
+                @include transition(all .1s ease-in);
+
+                &.active {
+                    background: #5080a3;
+                    .fa-chevron-down { color: $itinerumWhite }
+                }
+
+                a {
+                    color: #C1D0DF;
+                    font-weight: 400;
+                    padding-left: 1.72em;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-decoration: none;
+                    display: inline-block;
+                    width: 100%;
+
+
+                    @media (#{$phone}) {
+                        position: relative;
+                        padding-left: 0;
+                        text-align: center;
+
+                        &:hover + .submenu {
+                            max-height: 10em;
+                            visibility: visible;
+                            opacity: 0.95;
+                            @include transform(translateX(0px));
+                        };
+                    }
+
+                    &.active {
+                        color: #fff;
+                        background-color: $itinerumPrimaryBlue;
+                        font-weight: 600;
+                    }
+
+                    &:hover {
+                        color: #fff;
+                        background-color: $buttonPrimaryHover;
+                    }
+
+                    i {
+                        vertical-align: middle;
+                        margin-right: 6px;
+                        min-width: 17px;
+                        text-align: center;
+                        position: relative;
+                        transform: inherit !important;
+
+                        @media (#{$phone}) {
+                            font-size: 18px;
+                            margin: 0;
+
+                            &.fa-chevron-down {
+                                display: none;
+                            }
+                        }
+
+                        &.fa-chevron-down {
+                            float: right;
+                            font-size: 10px;
+                            top: 7px;
+                            right: 4px;
+                            color: #9BABBB;
+                        }
+                    }
+
+                    span {
+                        @media (#{$phone}) {
+                            display: none;
+                        }
+                    }
+                }
+
+                .submenu {
+                    position: relative;
+                    margin-top: 0;
+                    max-height: 0;
+                    overflow: hidden;
+
+                    -webkit-transition: max-height 0.2s ease-out;
+                       -moz-transition: max-height 0.2s ease-out;
+                        -ms-transition: max-height 0.2s ease-out;
+                         -o-transition: max-height 0.2s ease-out;
+                            transition: max-height 0.2s ease-out;
+
+                    li {
+                        margin: 0;
+                        border: 0;
+                        background: #5080a3;
+
+                        a {
+                            padding: 0.4em;
+                            padding-left: 3.5em;
+
+                            @media (#{$phone}) {
+                                padding-left: 0px;
+                                text-align: left;
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        max-height: 10em;
+                    };
+
+                    &.active {
+                        max-height: 10em;
+
+                        @media (#{$tablet}) {
+                            -webkit-transition: max-height 0.3s ease-in;
+                            -moz-transition: max-height 0.3s ease-in;
+                            -ms-transition: max-height 0.3s ease-in;
+                             -o-transition: max-height 0.3s ease-in;
+                                transition: max-height 0.3s ease-in;
+                        }
+
+                        li {
+                            a {
+                                font-weight: 400;
+                                box-shadow: none;
+                                background: #5080a3;
+
+                                &.active {
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom-menu {
+        position: fixed;
+        bottom: 0;
+        width: 16em;
+
+        .settings-section {
+            @media screen and (max-height: 500px) {
+                visibility: hidden;
+                transition: visibility 0.1s, opacity 0.1s linear;
+                opacity: 0;
+            }
+
+            ul {
+                list-style-type: none;
+                padding-left: 0;
+                margin: 0;
+            }
+
+            li {
+                transition: all 0.1s ease-in;
+            }
+
+            a {
+                color: #C1D0DF;
+                font-weight: 400;
+                padding-left: 1.72em;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                text-decoration: none;
+                display: inline-block;
+                width: 100%;
+
+                &.active {
+                    color: #fff;
+                    background-color: $itinerumPrimaryBlue;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    color: #fff;
+                    background-color: $buttonPrimaryHover;
+                }
+
+                @media (#{$phone}) {
+                    padding-left: 0;
+                    text-align: center;
+                }
+            }
+
+            i {
+                vertical-align: middle;
+                min-width: 17px;
+                margin-right: 6px;
+
+                @media (#{$phone}) {
+                    font-size: 18px;
+                    margin: 0;
+                }
+            }
+
+            // hide formattedtext when window is narrow 
+            span {
+                @media (#{$phone}) {
+                    display: none;
+                }
+            }            
+        }
+
+        > ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+
+            > li {
+                float: left;
+                display: block;
+                width: 50%;
+
+                &:last-child {
+                    border-right: 0;
+                }
+                a {
+                  text-decoration: none;
+                }
+
+                i {
+                    border-top: 1px solid #68747E;
+                    display: block;
+                    position: relative;
+                    text-align: center;
+                    padding: 0.6em 0;
+                    background: #263238;
+                    color: #ECEFF1;
+                    font-size: 18pt !important;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: $itinerumPrimaryBlue;
+
+                        &.exit {
+                            background-color: $itinerumRed;
+                            color: white;
+                        }
+                    }
+
+
+                }
+            }
+        }
+
+        @media (#{$phone}) {
+            width: 80px;
+
+            ul > li {
+                display: none;
+
+                &.always-show {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

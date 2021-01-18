@@ -1,0 +1,33 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .subway-status-button-group {
+        display: flex;
+        justify-content: center;
+
+        button {
+            margin: 0 1rem;
+        }
+
+
+        .subway-data-status {
+            &.warning:disabled {
+                color: $itinerumGray40;
+                background-color: $itinerumWhite;
+                border: 1px solid $itinerumWhite;
+            }
+
+            &.success:disabled {
+                color: $itinerumGray40;
+                background-color: $itinerumWhite;
+                border: 1px solid $itinerumWhite;
+            }
+
+            &:hover {
+                filter: inherit;
+                box-shadow: none;
+            }
+        }
+    }
+}

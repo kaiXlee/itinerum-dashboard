@@ -1,0 +1,17 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .title {
+        color: $itinerumPrimaryBlue;
+    }
+
+    .modal-body {
+        font-family: $nunitoSans;
+
+        textarea {
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+}

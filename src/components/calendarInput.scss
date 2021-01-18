@@ -1,0 +1,12 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .datepicker-icons {
+        position: relative;
+    }
+
+    .calendar-icon {
+        left: 10px;
+    }
+}

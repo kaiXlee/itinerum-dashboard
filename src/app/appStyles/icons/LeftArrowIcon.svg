@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="26px" height="14px" viewBox="0 0 26 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Left Arrow Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Elements" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-293.000000, -7740.000000)">
+        <g id="Pagination" transform="translate(150.000000, 7510.000000)" fill="#333333">
+            <g id="Shadow-Filled-Round" transform="translate(107.000000, 213.000000)">
+                <g id="Prev" transform="translate(36.000000, 1.000000)">
+                    <path d="M3.30850468,21.7625631 L7.36396103,17.7071068 C7.75448532,17.3165825 7.75448532,16.6834175 7.36396103,16.2928932 C6.97343674,15.9023689 6.34027176,15.9023689 5.94974747,16.2928932 L0.292893219,21.9497475 C0.053821605,22.1888191 -0.038894871,22.5188241 0.0147437908,22.8284271 C-0.038894871,23.1380301 0.053821605,23.4680352 0.292893219,23.7071068 L5.94974747,29.363961 C6.34027176,29.7544853 6.97343674,29.7544853 7.36396103,29.363961 C7.75448532,28.9734367 7.75448532,28.3402718 7.36396103,27.9497475 L3.1767767,23.7625631 L24.5125631,23.7625631 C25.0648479,23.7625631 25.5125631,23.3148479 25.5125631,22.7625631 C25.5125631,22.2102784 25.0648479,21.7625631 24.5125631,21.7625631 L3.30850468,21.7625631 Z" id="Left-Arrow-Icon"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

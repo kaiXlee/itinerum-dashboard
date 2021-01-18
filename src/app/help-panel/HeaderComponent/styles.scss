@@ -1,0 +1,182 @@
+@import 'src/app/appStyles/typography';
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/screens';
+
+
+:local(.styles) {
+    .no-pad {
+        padding: 0;
+    }
+
+    .header {
+        margin: 0;
+        height: auto;
+        padding-bottom: 1em;
+
+        .data-control {
+            margin-top: 1em;
+            padding-left: 2.5%;
+            padding-right: 2.5%;
+            position: relative;
+
+            .daterange-toggle {
+                font-family: $nunitoSans;
+                width: 100%;
+                display: inline;
+                text-transform: uppercase;
+                label {
+                    margin: 0em 1em;
+                    font-weight: bold;
+                    padding: 0.5em 1em;
+                    border-radius: 2px;
+                    display: inline;
+                    &::before {
+                        content: "\f131";
+                        display: inline-block;
+                        font: normal normal normal 24px/1 $materialicons;
+                        font-size: inherit;
+                        text-rendering: auto;
+                        -webkit-font-smoothing: antialiased;
+                        -moz-osx-font-smoothing: grayscale;
+                        transform: translate(0, 0);
+
+                        position: relative;
+                        right: 0.3em;
+                  }
+                  &:hover {
+                      background-color: $itinerumGray60;
+                  }
+                }
+                input {
+                  margin: inherit;
+                  display: none;
+
+                  &:checked + label {
+                    color: blue;
+                    &::before {
+                      content: "\f132";
+                    }
+                  }
+                }
+                @media screen and ($phone) {
+                    padding: 1em 0;
+                }
+            }
+
+
+            .daterange {
+
+              .disabled{
+                i {
+                  color: $itinerumRed;
+                }
+                input {
+                  &:hover {
+                      border-bottom-color: $itinerumRed;
+                      color: silver;
+                  }
+                }
+              }
+
+                .input-group-addon {
+                    background: white;
+                    border: 0;
+                }
+                input {
+                  border: 0;
+                  border-radius: 0;
+                  background-color: white;
+                  border-bottom: 1px solid silver;
+                  box-shadow: none;
+                  font-family: $nunitoSans;
+
+                  &:hover,
+                  &:focus {
+                    border-bottom: 1px solid $itinerumPrimaryBlue;
+                    color: $itinerumPrimaryBlue;
+                  }
+
+                }
+            }
+
+            i {
+                position: relative;
+                color: $itinerumPrimaryBlue;
+                top: -0.1em;
+                font-size: 1.3em;
+            }
+
+
+            .custom-control {
+              @media screen and ($phone), screen and ($tablet) {
+                  padding-top: 1em;
+              }
+                .control {
+                    padding-right: 1em;
+                    &:last-child {
+                        padding-right: 0em;
+                    }
+
+                    label {
+                        display: inline-block;
+                        padding-right: 0.3em;
+                    }
+
+                    select {
+                        height: 2.2em;
+                    }
+
+                    input {
+                        text-align: center;
+                        width: 3.6em;
+                        height: 2.2em;
+                    }
+
+                    input[type=number]::-webkit-inner-spin-button,
+                    input[type=number]::-webkit-outer-spin-button {
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        margin: 0;
+                    }
+
+                }
+            }
+
+            .download-data .btn {
+              font-size: 1em;
+              background-color: inherit;
+              text-transform: uppercase;
+              font-weight: bold;
+              background-color: $itinerumPrimaryBlue;
+              color: white;
+              border-radius: 2px;
+              border: inherit;
+              margin-left: 1em;
+
+              i {
+                color: white;
+                font-size: 14pt;
+                vertical-align: bottom;
+                transform: translateY(0.2em);
+              }
+              &:hover {
+                background-color: $buttonPrimaryHover;
+              }
+            }
+        }
+    }
+
+    .language-header {
+        top: 0;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.6);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 0.2em 0 0.2em 0;
+        width: 100%;
+
+        label {
+            margin-right: 0.2em;
+        }
+    }
+}

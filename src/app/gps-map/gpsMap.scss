@@ -1,0 +1,69 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .map-container {
+        position: relative;
+
+        .uuid-select {
+            background-color: transparent;
+            left: 8rem;
+            margin: inherit;
+            position: absolute;
+            top: 1.8rem;
+            z-index: 1001;
+
+            .Select-control {
+                box-shadow: 0 1px 5px rgba(0, 0, 0, 0.45);                
+            }
+
+            .Select-menu {
+                font-size: 13px;
+                font-family: $spaceMono;
+            }
+
+            .Select-value-label {
+                font-size: 13px;
+                font-family: $spaceMono;
+            }
+        }
+
+        .map {
+            .leaflet-container {
+                height: calc(100% - 61px);
+            }
+
+            .leaflet-control-zoom {
+                margin: 1.3em;
+                border: 1px solid rgba(0,0,0,0.2);
+                background-color: transparent;
+                a {
+                    color: $itinerumGray60;
+                
+                    &:hover {
+                        color: $itinerumWhite;
+                    }
+                }
+            }
+
+            .leaflet-popup {
+                opacity: 0.97 !important;
+            }
+
+            .leaflet-popup-tip,
+            .leaflet-popup-content-wrapper {
+                background: $itinerumGray98;
+                color: $itinerumGray20;
+            }
+
+            .leaflet-tooltip-left.tooltip::before {
+                border-left-color: black;
+                border: 0;
+                outline: 0;
+            }
+            .leaflet-tooltip-right.tooltip::before {
+                border-right-color: black;
+            }
+        }
+    }
+}

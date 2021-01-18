@@ -1,0 +1,9 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .i-input.icon-field {
+        text-align: center;
+        padding-left: 0;
+    }
+}

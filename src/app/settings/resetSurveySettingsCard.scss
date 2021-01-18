@@ -1,0 +1,36 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .delete-button-container {
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: flex;
+        }
+    }
+
+    .survey-status {
+        .status-light {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            margin-right: 0.75em;
+
+
+            &.active {
+                background-color: $itinerumGreen;
+            }
+
+            &.inactive {
+                background-color: $itinerumRed;
+            }
+        }
+
+        p { 
+            display: inline-block;
+        }
+    }
+}

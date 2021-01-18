@@ -1,0 +1,52 @@
+/* MaterialDesignIcons.com */
+@font-face{
+    font-family:"Material Design Icons";
+    src:url("./fonts/materialdesignicons-webfont.woff2?v=1.6.50") format("woff2"),
+        url("./fonts/materialdesignicons-webfont.woff?v=1.6.50") format("woff");
+    font-weight:normal;
+    font-style:normal
+}
+
+.mdi{
+    display:inline-block;
+    font:normal normal normal 24px/1 "Material Design Icons";
+    font-size:inherit;
+    text-rendering:auto;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    transform:translate(0, 0)
+}
+.mdi-autorenew:before{content:"\F06A"}
+.mdi-calendar-check:before{content:"\F0EF"}
+.mdi-calendar-remove:before{content:"\F0F4"}
+.mdi-chart-areaspline:before{content:"\F127"}
+.mdi-check:before{content:"\F12C"}
+.mdi-checkbox-marked-outline:before{content:"\F135"}
+.mdi-chevron-down:before{content:"\F140"}
+.mdi-chevron-left:before{content:"\F141"}
+.mdi-chevron-right:before{content:"\F142"}
+.mdi-cloud-download:before{content:"\F162"}
+.mdi-comment-text-outline:before{content:"\F189"}
+.mdi-content-save:before{content:"\F193"}
+.mdi-crosshairs-gps:before{content:"\F1A4"}
+.mdi-delete:before{content:"\F1C0"}
+.mdi-dots-horizontal:before{content:"\F1D8"}
+.mdi-download:before{content:"\F1DA"}
+.mdi-drag:before{content:"\F1DB"}
+.mdi-exit-to-app:before{content:"\F206"}
+.mdi-face:before{content:"\F643"}
+.mdi-folder-download:before{content:"\F24D"}
+.mdi-file-outline:before{content:"\F224"}
+.mdi-flag-variant:before{content:"\F240"}
+.mdi-help-circle-outline:before{content:"\F625"}
+.mdi-key-variant:before{content:"\F30B"}
+.mdi-numeric:before{content:"\F3A0"}
+.mdi-map-marker:before{content:"\F34E"}
+.mdi-package-variant-closed:before{content:"\F3D7"}
+.mdi-pencil:before{content:"\F3EB"}
+.mdi-settings:before{content:"\F493"}
+.mdi-star-circle:before{content:"\F4CF"}
+.mdi-trending-neutral:before{content:"\F534"}
+.mdi-upload:before{content:"\F552"}
+.mdi-vector-polyline:before{content:"\F561"}
+/*# sourceMappingURL=materialdesignicons.min.css.map */

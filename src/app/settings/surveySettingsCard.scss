@@ -1,0 +1,23 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .i-input.icon-field {
+        text-align: center;
+        padding-left: 0;
+    }
+
+    .settings-button-group {
+        display: flex;
+        justify-content: center;
+
+        button {
+            display: inline;
+            margin: 0.2rem 1rem;
+        }
+    }
+
+    .contact-email-row {
+        padding: 2rem 0 1rem;
+    }
+}

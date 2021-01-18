@@ -1,0 +1,133 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/screens';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    background: white;
+
+    .content-wrapper {
+        position: relative;
+        top: 0;
+        margin: inherit;
+        background: $itinerumBlueGray;
+        padding: inherit;
+        box-shadow: inherit;
+        padding: 0;
+        background-color: $itinerumBlueGray;
+        width: 100%;
+        overflow-x: hidden;
+        @media screen and ($phone) {
+            padding: 0;
+        }
+
+        .survey-help {
+            padding: 1em 2em 0em 2em;
+            font-family: $nunitoSans;
+            background-color: white;
+        }
+
+        .selections {
+            height: inherit;
+            width: 100%;
+            border: inherit;
+            padding: 0 2em 1em 2em;
+            background-color: white;
+            z-index: 999;
+
+            &::after,
+            &::before {
+                content: ' ';
+                display: table;
+            }
+            &::after {
+                clear: both;
+            }
+            @media screen and ($phone) {
+                padding: 1em 0;
+            }
+        }    
+    }
+
+    // container for save/restart survey buttons
+    .save-survey > button {
+      margin: 1em;
+      font-size: 1em;
+      text-transform: uppercase;
+      font-weight: bold;
+      border-radius: 2px;
+      border: inherit;
+      &:hover {
+        background-color: $buttonPrimaryHover;
+      }
+      i {
+        color: white;
+        font-size: 14pt;
+        vertical-align: bottom;
+      }
+    }
+
+    .btn-primary {
+      background-color: $itinerumPrimaryBlue;
+    }
+    .btn-danger {
+      background-color: $itinerumRed;
+    }    
+
+    .survey-save-status {
+        padding: 1em 0;
+        text-align: center;
+        font: normal 12pt/16pt $nunitoSans;
+    }
+
+    .affix {
+        top: 1em;;
+        right: 0;
+        padding-left: 5.7em;
+    }
+
+    .affix-top {
+        padding-top: 1em;
+    }
+
+    .affix-bottom {
+        position: absolute;
+    }
+
+    // survey reset modal
+    .modal-title {
+        color: red;
+    }
+
+    .modal-body {
+        input {
+            font-family: $sourceSansPro;
+        }
+    }    
+
+    .react-redux-modal .subway-help .modal-body {
+        font-family: $sourceSansPro;
+    }
+
+    // survey reset modal
+    .react-redux-modal .rrm-holder .scroll .rrm-title .title {
+        color: $sidebarBg;
+        font-size: 1em;
+        line-height: 60px;
+
+        i {
+            margin-left: -5px;
+            padding-right: 5px;
+        }
+    }
+
+    .react-redux-modal .rrm-holder .scroll .rrm-content .rrm-title .rr-title-actions button {
+        border-radius: 2px;
+
+        &:hover {
+            color: $itinerumPrimaryBlue;
+            cursor: pointer;
+            background-color: rgba(65, 134, 191, 0.1);
+            border-color: rgba(65, 134, 191, 0.2);
+        }
+    }    
+}

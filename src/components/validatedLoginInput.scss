@@ -1,0 +1,115 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .input-group {
+        margin-top: 10px;
+
+        .field-label {
+            color: $itinerumGray90;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid $itinerumGray90;
+            border-radius: 0;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: right;
+            vertical-align: bottom;
+            padding-bottom: 10px;
+        }       
+
+        .input-field-block {
+            position: relative;
+
+            input.input-field {
+                &:focus {
+                    outline: none;
+                }
+
+                &:-webkit-autofill {
+                    -webkit-text-fill-color: $itinerumWhite;
+                    -webkit-box-shadow: 0 0 0 1000px $loginEnteredTextBackground inset;
+                    border-left: none;
+                    border-right: none;
+                    border-top: none;
+                }
+
+                &.text-entered {
+                    box-shadow: 0 0 0px 1000px $loginEnteredTextBackground inset;
+                }
+            }            
+
+            .input-field {
+                background-color: hsla(0, 0%, 100%, 0);
+                border-color: transparent transparent $itinerumWhite;
+                border-radius: 0;
+                border-style: solid;
+                border-top-left-radius: 4px;
+                border-top-right-radius: 4px;
+                border-width: 0 0 1px;
+                box-shadow: none;
+                color: $itinerumWhite;
+                height: 45px;
+                font-size: 15px;
+                font-weight: 600;
+                padding-top: 15px;
+                transition: all 500ms ease;
+                -webkit-transition: all 500ms ease;
+
+                &:focus {
+                    box-shadow: 0 20px 30px 0 rgba(0, 0, 0, .17);
+                }
+
+                &::placeholder {
+                    color: $itinerumWhite;
+                    font-size: 17px;
+                    font-weight: 800;
+                    letter-spacing: 0.5px;
+                }
+
+                &::selection {
+                    background: $itinerumPrimaryBlue;
+                }
+            }
+
+            .i-tooltip {
+                position: relative;
+                display: inline-block;
+
+                .i-tooltip-text {
+                    border-radius: 4px;
+                    color: $itinerumWhite;
+                    background-color: rgba(20, 20, 20, 0.85);
+                    font-size: 14px;
+                    left: -210px;
+                    padding: 5px 10px;
+                    position: absolute;
+                    visibility: hidden;
+                    width: 200px;
+                    text-align: center;
+                    top: -10px;
+                    z-index: 3;
+                }
+
+                &:hover .i-tooltip-text {
+                    visibility: visible;
+                }
+            }
+
+            .validation-icon {
+                position: absolute;
+                right: -35px;
+                text-shadow: 0 0 20px rgba(0, 0, 0, .17);
+                top: 10px;
+
+                &.has-success {
+                    color: $itinerumGreen;
+                }
+
+                &.has-error {
+                    color: $itinerumRed;
+                }
+            }
+        }
+    }    
+}

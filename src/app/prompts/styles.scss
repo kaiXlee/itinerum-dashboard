@@ -1,0 +1,116 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/screens';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    background: white;
+
+    .content-wrapper {
+        position: relative;
+        top: 0;
+        margin: inherit;
+        background: $itinerumBlueGray;
+        padding: inherit;
+        box-shadow: inherit;
+        padding: 0;
+        background-color: $itinerumBlueGray;
+        width: 100%;
+        overflow-x: hidden;
+        @media screen and ($phone) {
+            padding: 0;
+        }
+
+        .prompts-help {
+            padding: 1em 2em 0em 2em;
+            font-family: $nunitoSans;
+            background-color: white;
+
+            .prompts-parameters {
+                z-index: 999;
+                position: absolute;
+                right: .5em;
+
+                a {
+                    color: $itinerumGray20;
+                    font-family: $nunitoSans;
+                    font-size: 1.1em;
+
+                    &:hover {
+                        text-decoration: none;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }            
+        }
+
+        .selections {
+            height: inherit;
+            width: 100%;
+            border: inherit;
+            padding: 0 1em 1em 1em;
+            background-color: white;
+            position: relative;
+
+            &::after,
+            &::before {
+                content: ' ';
+                display: table;
+            }
+            &::after {
+                clear: both;
+            }
+            @media screen and ($phone) {
+                padding: 1em 0;
+            }
+        }        
+    }
+
+    // container for save/restart survey buttons
+    .save-prompts > button {
+        margin: 1em;
+        font-size: 1em;
+        text-transform: uppercase;
+        font-weight: bold;
+        border-radius: 2px;
+        border: inherit;
+        
+        &:hover {
+            background-color: $buttonPrimaryHover;
+        }
+        
+        i {
+            color: white;
+            font-size: 14pt;
+            vertical-align: bottom;
+        }
+    }
+
+    .btn-primary {
+        background-color: $itinerumPrimaryBlue;
+    }
+    .btn-danger {
+        background-color: $itinerumRed;
+    }
+
+    .prompts-save-status {
+        padding-top: 1em;
+    }
+
+    .affix {
+        top: 1em;;
+        right: 0;
+        padding-left: 5.7em;
+    }
+
+    .affix-top {
+        padding-top: 1em;
+    }
+
+    .affix-bottom {
+        position: absolute;
+    }
+
+}

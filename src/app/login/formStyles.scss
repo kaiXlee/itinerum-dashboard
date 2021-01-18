@@ -1,0 +1,45 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+
+:local(.styles) {
+    .signup-box {
+        width: 100%;
+
+        .title {
+            color: $itinerumWhite;
+        }
+    }
+
+    .form-group {
+        margin-top: 30px;
+    }
+
+    .field-label {
+        &.en {
+            min-width: 150px;
+        }
+
+        &.fr {
+            font-size: 14px;
+            min-width: 250px;
+        }
+    }
+
+    .has-error {
+        .form-control {
+            border-color: $itinerumRed;
+        }
+
+        i {
+            color: $itinerumRed;
+            cursor: help;
+        }
+    }
+
+    .has-success {
+        .form-control {
+            border-color: $itinerumGreen;
+        }
+    }   
+}

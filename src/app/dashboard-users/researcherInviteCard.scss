@@ -1,0 +1,33 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/spinner';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .code-label {
+        line-height: 50px;
+    }
+
+    .input-group-addon.after {
+        border: inherit;
+        background-color: inherit;
+        padding: 0;
+    }
+
+    .button.refresh {
+        margin-left: 1rem;
+    }
+
+    .loading-spinner.refresh {
+        border: 2px solid $itinerumWhite;
+        border-top: 2px solid $itinerumPrimaryBlue;        
+        display: inline-block;
+        height: 16px;
+        width: 16px;
+        font-size: 16px;
+        margin: 4px;
+    }
+
+    #registration-code-input {
+        cursor: text;
+    }
+}

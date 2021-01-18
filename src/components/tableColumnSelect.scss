@@ -1,0 +1,51 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .card {
+        padding-top: 0.1rem;
+
+        h5 {
+            margin-top: 5px;
+        }
+    }
+
+    .column-tag-container {
+        list-style: none;
+        margin: 0;
+        overflow: hidden;
+        padding-left: 1rem;
+        display: inline-block;
+    }
+
+    .column-tag-container li {
+        float: left;
+    }
+
+    .column-tag {
+        align-items: center;
+        border-radius: 16px;
+        color: $itinerumPrimaryBlue;
+        cursor: pointer;
+        display: flex;
+        font-weight: 600;
+        height: 26px;
+        line-height: 26px;
+        margin: 0 10px 10px 0;
+        border: 1px solid $itinerumPrimaryBlue;
+        padding: 0 18px 0 18px;
+        position: relative;
+        text-decoration: none;
+        -webkit-transition: color 0.2s;
+    }
+
+    .column-tag:hover {
+        background: $itinerumSecondaryBlue;
+        color: $itinerumPrimaryBlue;
+    }
+
+    .active {
+        background: $itinerumPrimaryBlue;
+        color: $itinerumWhite;
+    }
+}

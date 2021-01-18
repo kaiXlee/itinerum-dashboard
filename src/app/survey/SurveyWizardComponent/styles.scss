@@ -1,0 +1,525 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/screens';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .selection-container {
+        cursor: move;
+        display: block;
+        float: left;
+        padding: 0.3em 0.3em;
+    }
+
+    // button options on right side of page
+    .selection {
+        color: white;
+        background-color: $itinerumPrimaryBlue;
+        width: 100%;
+        max-width: 14em;
+        height: 2.4em;
+        margin: inherit;
+        border: inherit;
+
+        text-align: left;
+        font-family: $nunitoSans;
+
+        text-transform: uppercase;
+        font-size: 1em;
+        font-weight: bold;
+        box-shadow: $shadow;
+
+        &:focus,
+        &:hover {
+            color: white;
+            background-color: $buttonPrimaryHover;
+            cursor: grab;
+        }
+        &:active {
+            cursor: grabbing;
+        }
+
+        i {
+            padding-right: 0.3em;
+        }
+    }
+
+    .button-label {
+        padding-left: 0;
+    }
+
+    .button-label {
+        @media screen and ($phone) {
+            text-align: left;
+            span {
+                display: none;
+            }
+        }
+    }
+
+    // container for survey question elements
+    .stack {
+        padding: 2em 5em 5em 5em; // always create some room for a new
+                                  // question to be dropped into stack
+        background-color: $itinerumBlueGray;
+    }
+        .language-about-row {
+            align-items: center;
+            background: rgb(250, 250, 250);
+            display: flex;
+            margin: 5px -3em 1em -3em;
+            padding: 1em;
+
+            border: 1px solid transparent;
+            box-shadow: $shadow;
+            text-align: center;
+
+            .language {
+                .select-field {
+                    margin: auto;
+                    background-color: white;
+
+                    .form-control {
+                        border: inherit;
+                        border-radius: 2px;
+                        background-color: white;
+                        font-family: $nunitoSans;
+                        &:hover {
+                            color: $itinerumPrimaryBlue;
+                        }
+                    }
+
+                    label {
+                        width: 100%;
+                        position: relative;
+                        background: rgb(250, 250, 250);
+                        &::after {
+                            content:'\f174';
+                            font: normal 12pt/15pt $materialicons;
+                            color: #888;
+                            -webkit-transform:rotate(90deg);
+                            -moz-transform:rotate(90deg);
+                            -ms-transform:rotate(90deg);
+                            transform:rotate(90deg);
+                            right: 0.3em;
+                            top: 1.8em;
+                            /*border-bottom:1px solid #ddd;*/
+                            position:absolute;
+                            pointer-events:none;
+                        }
+                    }
+                    select {
+                        font-weight: normal;
+                        border-radius: 2px;
+                        background-color: white;
+                        box-shadow: $shadow;
+                        font-family: $nunitoSans;
+                        font-size: 10pt;
+                        color: black;
+                        border:  none;
+                        outline: none;
+                        display: inline-block;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .about {
+                label {
+                    display: block;
+                }
+            }
+        }
+
+        // generic survey question element
+        .question {
+            background: white;
+            min-height: 60px;
+            margin: 5px 5px 1em 5px;
+            padding: 10px;
+            border-radius: 0;
+
+
+            // create a border the same color as background so element
+            // content does not shift inward on hover
+            border: 2px solid transparent;
+            box-shadow: $shadow;
+            box-sizing: border-box;
+
+            font-family: $nunitoSans;
+            font-weight: inherit;
+
+            // show edit controls when question element is hovered
+            .controls {
+                visibility: visible !important;
+            }
+
+            .title {
+                font-size: 14pt;
+                text-align: center;
+                border-bottom: 0;
+
+                &.editable {
+                    input {
+                        width: 95%;
+                        border: 0;
+                        border-bottom: 1px solid silver;
+                        outline: none;
+                        background-color: transparent;
+                        font-family: inherit;
+                        font-size: inherit;
+                        margin: 0 0 10px 0;
+                    }
+                    input:focus {
+                      border-bottom: 1px solid $itinerumPrimaryBlue;
+                    }
+
+                    i {
+                        float: right;
+                    }
+
+                    &:hover {
+                        color: $itinerumPrimaryBlue;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+                cursor: move;
+                transition: transform 0.4s;
+            }
+
+            &.placeholder {
+                border-radius: 2px;
+                opacity: 0.65;
+                height: 8em;
+                border: 1px dashed silver;
+                display: none;
+
+                .show {
+                    display: initial;
+                }          
+            }
+        }
+
+    // generic container for field style below title
+    .form-field {
+        margin-top: 1em;
+
+        .textbox-input {
+            p {
+                max-width: 400px;
+                max-height: 500px;
+                overflow-y: scroll;
+                margin: auto;
+            }
+            .form-group textarea {
+                border-radius: 0;
+                border: 0;
+                border-bottom: 1px solid silver;
+                box-shadow: inherit;
+                max-width: 500px;
+                margin: auto;
+                height: auto;
+
+                &:focus {
+                    border: 1px solid $itinerumPrimaryBlue;
+                    color: black;
+                }
+            }
+        }
+
+        .choice {
+            text-align: center;
+
+            &.editing {
+                margin-bottom: 0.1em;
+
+                label {
+                    font-size: 1.33em;
+                }
+                input {
+                    border: 0;
+                    border-bottom: 1px solid silver;
+                    font-size: 12pt;
+                }
+                input:focus {
+                    outline: inherit;
+                    border-bottom: 2px solid $itinerumPrimaryBlue;
+                    color: $itinerumPrimaryBlue;
+                }
+            }
+
+            label {
+                padding-right: .5em;
+
+            }
+
+            input[type="text"] {
+                width: 50%;
+            }
+
+        }
+
+
+        .help {
+            margin-top: 0.3em;
+            font-variant: small-caps;
+        }
+        .btn-danger {
+            background-color: transparent;
+            color: $itinerumRed;
+        }
+        .btn-success {
+            background-color: transparent;
+            color: $itinerumGreen;
+        }
+        .btn {
+            border: inherit;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            font-weight: bold;
+            font-family: $nunitoSans;
+            &:hover {
+                background-color: $itinerumGray90;
+            }
+        }
+    }
+
+
+    // individual field styles
+    .single-choice {
+        .prompt {
+            margin-left: 5%;
+        }
+    }
+
+    .time {
+        .time-input {
+            text-align: center;
+        }
+
+        .time-seperator {
+            margin: 0 0.25em 0 0.25em;
+            font-weight: bold;
+        }
+
+        .am-pm {
+            margin-left: 0.35em;
+        }
+
+        input {
+            text-align: center;
+            max-width: 4em;
+        }
+
+        .help {
+            text-align: center;
+        }
+    }
+
+    .address {
+        text-align: center;
+        i {
+            font-size: 48pt !important;
+            color: $itinerumPrimaryBlue;
+            padding-bottom: 0.3em;
+        }
+
+        .caption {
+            font-size: 0.7em;
+            text-transform: uppercase;
+        }
+    }
+
+    .dropdown {
+        .dropdown-select {
+            margin: auto;
+            width: 50%;
+            max-width: 300px;
+            background-color: white;
+
+            .form-control {
+                border: inherit;
+                border-radius: 2px;
+                background-color: white;
+                font-family: $nunitoSans;
+                &:hover {
+                    color: $itinerumPrimaryBlue;
+                }
+            }
+
+            label {
+                width: 100%;
+                position: relative;
+                &::after {
+                    content:'\f174';
+                    font: normal 12pt/15pt $materialicons;
+                    color: #888;
+                    -webkit-transform:rotate(90deg);
+                    -moz-transform:rotate(90deg);
+                    -ms-transform:rotate(90deg);
+                    transform:rotate(90deg);
+                    right: 0.3em;
+                    top: 0.4em;
+                    /*border-bottom:1px solid #ddd;*/
+                    position:absolute;
+                    pointer-events:none;
+                }
+            }
+            select {
+                font-weight: normal;
+                border-radius: 2px;
+                background-color: white;
+                box-shadow: $shadow;
+                font-family: $nunitoSans;
+                font-size: 10pt;
+                color: black;
+                border:  none;
+                outline: none;
+                display: inline-block;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .email {
+        .email-input {
+            text-align: center;
+
+            label {
+                font-weight: normal;
+                padding-right: .5em;
+            }
+
+            input {
+                width: 50%;
+                border: 0;
+                border-bottom: 1px solid silver;
+
+                &:focus {
+                    border-bottom: 1px solid $itinerumPrimaryBlue;
+                    outline: none;
+                    color: $itinerumPrimaryBlue;
+                }
+            }
+        }
+    }
+
+    // generic component management
+    .add-remove {
+        margin-top: 0.7em;
+        font-size: 1.4em;
+
+        button {
+            margin-right: 0.4em;
+            line-height: 0.8em;
+        }
+
+        i {
+            font-style: normal;
+        }
+
+        .btn-danger {
+            background-color: transparent;
+            color: $itinerumRed;
+        }
+        .btn-success {
+            background-color: transparent;
+            color: $itinerumGreen;
+        }
+        .btn {
+            border: inherit;
+            font-size: 1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            font-weight: bold;
+            font-family: $nunitoSans;
+            &:hover {
+                background-color: $itinerumGray90;
+            }
+        }
+    }
+
+    // hover edit controls
+    .controls {
+        visibility: hidden;
+
+        input {
+            background-color: transparent;
+            border: 0;
+            border-bottom: 1px solid silver;
+
+            &:focus {
+                border-bottom: 1px solid $itinerumPrimaryBlue;
+                color: $itinerumPrimaryBlue;
+                outline: none;
+            }
+        }
+
+        .colname {
+            margin-top: 0.7em;
+            margin-left: 1em;
+            margin-bottom: -3.2em;
+
+            label {
+                font-size: 0.9em;
+                font-weight: normal;
+            }
+
+            input {
+                margin-left: 0.5em;
+            }
+        }
+
+        button {
+            margin: 1em;
+            font-size: 1em;
+            background-color: inherit;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 2px;
+            border: inherit;
+
+
+            -webkit-transition: background-color .1s ease;
+            -moz-transition: background-color .1s ease;
+            -o-transition: background-color .1s ease;
+            -ms-transition: background-color .1s ease;
+            transition: background-color .1s ease;
+        }
+
+        .edit,
+        .save {
+            color: $itinerumPrimaryBlue;
+            background-color: inherit;
+
+            &:hover {
+                background-color: $itinerumGray90;
+            }
+        }
+
+        .delete {
+            background-color: transparent;
+            color: $itinerumRed;
+            margin-right: 1em;
+            padding-left: 1em;
+            padding-right: 1em;
+
+            &:hover {
+                background-color: $itinerumGray90;
+            }
+
+            i {
+                font-size: 1.3em !important;
+            }
+        }
+    }
+}

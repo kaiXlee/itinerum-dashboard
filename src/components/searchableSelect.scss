@@ -1,0 +1,24 @@
+@import 'src/app/appStyles/colors_v2';
+@import 'src/app/appStyles/typography';
+
+:local(.styles) {
+    .Select {
+        width: 24em;
+        font-family: $nunitoSans;
+        font-size: 11pt;
+        color: $itinerumGray20;
+        border:  none;
+        outline: none;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    .Select-control {
+        height: 2.5em;
+    }
+
+    .Select-placeholder,
+    .Select--single > .Select-control .Select-value {
+        line-height: 2.5em;
+    }    
+}
