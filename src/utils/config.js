@@ -6,8 +6,11 @@ if (location.hostname.indexOf('testing') !== -1) {
 	rootHost = 'testing.' + rootHost
 }
 
-let url = '//api.' + rootHost + '/dashboard/v1/',
-    sse = '//api.' + rootHost + '/dashboard/v1/stream'
+// let url = '//api.' + rootHost + '/dashboard/v1/',
+//     sse = '//api.' + rootHost + '/dashboard/v1/stream'
+let url = '//' + location.hostname + ':443/dashboard/v1/',
+    sse = '//' + location.hostname + ':443/dashboard/v1/stream'
+
 
 // override if NODE_ENV set to development by webpack
 let devHost = window.location.hostname
